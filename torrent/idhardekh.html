@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IdharDekh</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<style>
+  .swiper {
+    width: 200px;
+    aspect-ratio: 4/3;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  iframe {
+    width: 200px;
+    aspect-ratio: 4/3;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    padding: 12px;
+    color: whitesmoke;
+    transition:0.4s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .swiper-button-next {
+    right: 0;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+    border-radius: 0 20px 20px 0;
+  }
+</style>
+
+<body>
+  <!-- Slider main container -->
+  <div>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><iframe width="800" src="https://www.youtube.com/embed/5p7QSlrQYEk"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe></div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+</body>
+
+</html>
